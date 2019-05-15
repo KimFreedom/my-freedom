@@ -1,6 +1,17 @@
-package net.freedom.web;
+package net.freedom.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@Column(nullable=false, length=20)
 	private String userID;
 	private String password;
 	private String name;
